@@ -1,1 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+#grade-curricular {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.semestre {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    width: 300px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.semestre:hover {
+    transform: translateY(-5px);
+}
+
+.semestre h2 {
+    color: #0056b3;
+    margin-top: 0;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.disciplina {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.disciplina:hover {
+    background-color: #f9f9f9;
+}
+
+.disciplina input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.disciplina.concluida {
+    background-color: #d4edda;
+    color: #155724;
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+
+.disciplina.concluida label {
+    font-weight: bold;
+}
+
+.disciplina.bloqueada {
+    color: #6c757d;
+    cursor: not-allowed;
+    background-color: #e9ecef;
+    opacity: 0.6;
+}
+
+.disciplina.bloqueada input[type="checkbox"] {
+    pointer-events: none; /* Desabilita clique no checkbox */
+}
+
+.prerequisitos {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 5px;
+    padding-left: 25px; /* Alinha com o texto da disciplina */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 30px;
+}
